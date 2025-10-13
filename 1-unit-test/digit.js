@@ -3,7 +3,7 @@ module.exports = function(n) {
     let k = 0;
     while(n) {
         k++;
-        n /= 10;
+        n = parseInt(n / 10);
     }
     return k;
 };
