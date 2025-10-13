@@ -27,3 +27,13 @@ try {
 } catch {
     console.log('Любое число является корнем данного уравнения.');
 }
+
+
+const pow = require('./pow.js');
+
+console.log('***** Возведение числа в заданную степень *****');
+console.log('Введите вещественное число - основание степени:');
+let x = input.questionFloat();
+console.log('Введите целое положительное число - показатель степени:');
+let k = input.questionInt();
+console.log(`${x}^${k} = ${pow(x, k)}`);

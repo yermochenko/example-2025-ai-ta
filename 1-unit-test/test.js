@@ -1,5 +1,6 @@
 const digit = require('./digit.js');
 const solve = require('./solve.js');
+const pow = require('./pow.js');
 
 const assert = require('assert');
 const { test, suite } = require('mocha');
@@ -45,5 +46,43 @@ suite('solve', function() {
 
     test('test 6', function() {
         assert.throws(() => { solve(0, 0, 0); }, { name: 'IllegalArguments' });
+    });
+});
+
+const assertDouble = function(actual, expected, tolerance) {
+    if(Math.abs(actual - expected) <= tolerance) {
+        assert.ok(true);
+    } else {
+        assert.fail(`error:\nexpected value is ${expected}\nactual value is ${actual}`);
+    }
+};
+
+suite('pow', function() {
+    test('test 1', function() {
+        assertDouble(pow(3, 5), 243, 0.0001);
+    });
+
+    test('test 2', function() {
+        assertDouble(pow(2.5, 6), 244.1406, 0.0001);
+    });
+
+    test('test 3', function() {
+        assertDouble(pow(-2, 3), -8, 0.0001);
+    });
+
+    test('test 4', function() {
+        assertDouble(pow(-2, 4), 16, 0.0001);
+    });
+
+    test('test 5', function() {
+        assertDouble(pow(4, 0), 1, 0.0001);
+    });
+
+    test('test 6', function() {
+        assertDouble(pow(0, 4), 0, 0.0001);
+    });
+
+    test('test 7', function() {
+        assertDouble(pow(0, 0), 1, 0.0001);
     });
 });
