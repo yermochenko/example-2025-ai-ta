@@ -5,5 +5,5 @@ module.exports = function(n) {
         k++;
         n = parseInt(n / 10);
     }
-    return k;
+    return k !== 0 ? k : 1;
 };
