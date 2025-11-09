@@ -1,0 +1,14 @@
+{
+  "name": "3-api-test",
+  "version": "1.0.0",
+  "description": "API tests example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Yermochenko S. A.",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^11.7.2"
+  }
+}
