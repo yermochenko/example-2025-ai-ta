@@ -1,0 +1,15 @@
+{
+  "name": "4-ui-test",
+  "version": "1.0.0",
+  "description": "User interface tests example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Yermochenko S. A.",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^11.7.2",
+    "selenium-webdriver": "4.35.0"
+  }
+}
